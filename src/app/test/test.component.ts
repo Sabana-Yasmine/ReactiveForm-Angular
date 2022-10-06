@@ -14,7 +14,7 @@ export class TestComponent implements OnInit {
   ngOnInit(): void {
     this.myForm = new FormGroup({
       "name"     : new FormControl("",Validators.required),
-      "phoneNumber" : new FormControl("", [Validators.required, Validators.maxLength(10)]),
+      "phoneNumber" : new FormControl("", [Validators.required, Validators.maxLength(10),  Validators.minLength(10)]),
       "address"  : new FormGroup({
         "city"  : new FormControl ("",Validators.required),
         "state" : new FormControl ("",Validators.required)

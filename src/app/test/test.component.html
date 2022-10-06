@@ -10,7 +10,7 @@
 
     <div class="form-group">
       <label >Phone Number</label>
-      <input type="number" class="form-control" formControlName="phoneNumber" required>
+      <input type="text" class="form-control" formControlName="phoneNumber" >
 
 
       <div *ngIf="myForm.get('phoneNumber')?.invalid &&
@@ -22,7 +22,11 @@
     </div>
 
     <div *ngIf="myForm.get('phoneNumber')?.errors?.['maxlength']">
-      Number must be at least 10 characters long.
+      should not greater than 10 numbers
+    </div>
+
+    <div *ngIf="myForm.get('phoneNumber')?.errors?.['minlength']">
+      should not less than 10 numbers
     </div>
 
       </div>
